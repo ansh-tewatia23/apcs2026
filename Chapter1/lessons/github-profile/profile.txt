@@ -1,6 +1,6 @@
 Name:Ansh Tewatia
 Grade:11th 
-Favorite Programming Language: C++
+Favorite Programming Language: Python
 Favorite Thing About Computer Science: Building programs 
 Something I Am Good At: Valorant
 Something I Want To Learn: How to ski
