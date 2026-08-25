@@ -6,6 +6,8 @@
  */
 
 import java.util.Scanner;
+import java.text.NumberFormat;
+
 
 public class WeeklyBudget
 {
@@ -14,6 +16,9 @@ public class WeeklyBudget
         String name;
         double allowance, lunchPrice, totalCost, remaining;
         int lunchesPerWeek;
+        
+        NumberFormat money= NumberFormat.getCurrencyInstance();
+
         
         // Instantiate the Scanner object to read from the keyboard
         Scanner scan = new Scanner (System.in);
@@ -36,10 +41,15 @@ public class WeeklyBudget
         //Perfomr calculations (Arithmetic expressions)
         totalCost=lunchPrice*lunchesPerWeek;
         remaining=allowance-totalCost;
+
+        //printf allows placeholders for strings using %s
+        System.out.printf("---Weekly Budget summary for %sn---", name);
+
         
-        System.out.println(allowance);
-        System.out.println(totalCost);
-        System.out.println(remaining);
+        System.out.printf("%-25s %s%n", "Weekly allowance", money.format(allowance));
+        System.out.printf("%-25s %s%n", "Total spent on lunches:", money.format(totalCost));
+        System.out.printf("%-25s %s%n", "Money remaining:", money.format(remaining));
+        
         
         
     }   
