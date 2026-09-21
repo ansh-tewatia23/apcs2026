@@ -4,9 +4,9 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
+PROJECT TITLE: Movie Ticket Pricer
+PURPOSE OF PROJECT: To learn if statements
+VERSION or DATE: 9/21/2026
 HOW TO START THIS PROJECT:
-AUTHORS:
+AUTHORS: Ansh Tewatia
 USER INSTRUCTIONS:
