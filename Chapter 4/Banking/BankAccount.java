@@ -36,8 +36,9 @@ public class BankAccount
     }
     
     // Withdraw the given amount
+    //mutator method (method that changes a class variable)
     public boolean withdraw(double amount) {
-        if (balance >= amount || amount>0) {
+        if (balance >= amount && amount>0) {
             balance-=amount;
             transactionCount++;
             return true;
@@ -46,13 +47,26 @@ public class BankAccount
     }
     
     
+    //Adds interest to the account balance (Mutator method)
+    public void applyInterest(double annualRate, int months) {
+        double monthlyRate= (annualRate/100.0)/12;
+        for (int m=1; m<=months; m++) {
+            balance+=balance * monthlyRate;
+        }
+    }
     
     
+    public double getBalance() {
+        return this.balance;
+    }
     
     
-    
-    
-    
+    //The toString method determines what string is returned when you try to print a BankAccont object
+    public String toString() {
+        return "Account: "+this.accountHolder+" | Balance: $"+
+            String.format("%.2f", balance)+ " | Transactions: "+ 
+            this.transactionCount;
+    }
     
     
 }
